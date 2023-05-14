@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import CreationEdit from "./pages/CreationEdit";
+import CreationIndex from "./pages/CreationIndex";
+import CreationNew from "./pages/CreationNew";
+import CreationShow from "./pages/CreationShow";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
-function App() {
+//mockData
+import mockCreations from "./mockCreations";
+
+function App () {
+  const [creations, setCreations] = useState(mockCreations);
+  console.log(creations);
+
+  const createCreation =(creation) => {
+    console.log(creation);
+  }
+
+  const updateCreation =(creation, id) => {
+    console.log("creation:", creation);
+    console.log("id:", id);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+    <Header />
+      <Routes>
+        <Route path="/" element={ <Home/>}/>
+        <Route path="/creationindex" element={<CreationIndex creations={creations}/> }/>
+        <Route path="/creationshow" element={<CreationShow creations={creations}/>} />
+        <Route path="/creationnew" element={<CreationNew creations={creations}/>} />
+        <Route path="/creationedit/:id" element={<CreationEdit creations={creations} updateCreation={updateCreation}/>} />
+        <Route path="*" element={<NotFound />} />
+     </Routes>
+     <Footer />
+  </>
+  )
+};
 
 export default App;
