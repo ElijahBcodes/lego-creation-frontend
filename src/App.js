@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import './App.css';
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import CreationEdit from "./pages/CreationEdit";
 import CreationIndex from "./pages/CreationIndex";
 import CreationNew from "./pages/CreationNew";
@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 import mockCreations from "./mockCreations";
 
 function App () {
-  // eslint-disable-next-line 
+
   const [creations, setCreations] = useState(mockCreations);
   console.log(creations);
 
@@ -29,7 +29,7 @@ function App () {
 
   return (
     <>
-    <Header />
+    <Navbar/>
       <Routes>
         <Route path="/" element={ <Home/>}/>
         <Route path="/creationindex" element={<CreationIndex creations={creations}/> }/>
