@@ -14,17 +14,17 @@ import NotFound from "./pages/NotFound";
 import mockCreations from "./mockCreations";
 
 function App () {
-  // eslint-disable-next-line 
+
   const [creations, setCreations] = useState(mockCreations);
   console.log(creations);
 
-  // const createCreation =(creation) => {
-  //   console.log(creation);
-  // }
+  const createCreation =(creation) => {
+    console.log(creation);
+  }
 
   const updateCreation =(creation, id) => {
-    console.log("creation:", creation);
-    console.log("id:", id);
+    console.log(creation);
+    console.log(id);
   }
 
   return (
