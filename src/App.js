@@ -31,7 +31,8 @@ function App () {
         <Route path="/creationshow" element={<CreationShow creations={creations}/>} />
         <Route path="/creationnew" element={<CreationNew creations={creations}/>} />
         <Route path="/creationedit/:id" element={<CreationEdit creations={creations} updateCreation={updateCreation}/>} />
-  
+        <Route path="*" element={<NotFound/>} />
+        
      </Routes>
   </>
   )
