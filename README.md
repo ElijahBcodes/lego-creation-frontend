@@ -1,4 +1,5 @@
-# LEGO Creations 
+# LEGO Creations
+
 ![LEGO Creations Logo](src/helpers/legobrick.png)
 
 Welcome to our LEGO Creations Website! This project allows users to explore, create, and save their own LEGO creations. Whether you're a seasoned LEGO enthusiast or just starting out, this platform offers a creative space for you to showcase your designs.
@@ -20,11 +21,11 @@ Welcome to our LEGO Creations Website! This project allows users to explore, cre
 ## Getting Started
 
 1. Install dependencies:
-    ``yarn install``
+   `yarn install`
 2. Start the development server:
-    ``yarn start``
-Open the application:
-Visit http://localhost:3000 in your browser.
+   `yarn start`
+   Open the application:
+   Visit http://localhost:3000 in your browser.
 
 Contributing
 We welcome contributions from the community! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
@@ -36,7 +37,3 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Feel free to customize it further to fit your project's specific details and branding!
-
-
-
-
