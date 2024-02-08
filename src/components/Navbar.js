@@ -5,6 +5,7 @@ const navbar = () => {
   return (
     <div className="navbar bg-base-100">
   <Link to="/creationindex"  className="btn btn-ghost text-xl">Lego Creations</Link>
+  <Link to="/"  className="btn btn-ghost text-xl">Home</Link>
 </div>
   )
 }
