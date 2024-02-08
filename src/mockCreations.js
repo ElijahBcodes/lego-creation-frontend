@@ -2,13 +2,13 @@ const creations = [
     {
         id:1,
         name:" Star Wars", 
-        description:"Vader",
+        description:"Vader the cat does not care about lego",
         image:"https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
         id:2,
         name:"Sailer Man", 
-        description:"Playing a flute",
+        description:"An old sailor with a giant grey beard and bald head. Life size wearing a red and yellow stripe sweater, wPlaying a flute",
         image:"https://c1.wallpaperflare.com/preview/469/621/110/legoland-building-blocks-legos-lego.jpg"
     },
     {
