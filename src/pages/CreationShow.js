@@ -1,6 +1,7 @@
 import React from 'react'
 
-const CreationShow = () => {
+const CreationShow = ( {creations}) => {
+  console.Console.log(creations)
   return (
     <div>CreationShow</div>
   )
