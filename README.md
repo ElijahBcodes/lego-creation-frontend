@@ -2,12 +2,12 @@
 
 ![LEGO Creations Logo](src/helpers/legobrick.png)
 
-Welcome to our LEGO Creations Website! This project allows users to explore, create, and save their own LEGO creations. Whether you're a seasoned LEGO enthusiast or just starting out, this platform offers a creative space for you to showcase your designs.
+Welcome to our LEGO Creations Website! This project allows users to explore, create, and save their own creations. Whether you're a seasoned brick enthusiast or just starting out, this platform offers a creative space for you to showcase your designs.
 
 ## Features
 
-- **User Authentication:** Create an account to save and access your LEGO creations.
-- **Create:** Design your own LEGO creations using our intuitive interface.
+- **User Authentication:** Create an account to save and access your creations.
+- **Create:** Design your own creations using our intuitive interface.
 - **Save:** Save your creations to your account for later access and sharing.
 - **Explore:** Browse through a gallery of creations made by other users for inspiration.
 - **Responsive Design:** Enjoy a seamless experience across various devices.
