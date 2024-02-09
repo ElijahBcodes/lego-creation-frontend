@@ -1,6 +1,7 @@
 # LEGO Creations
 
 ![LEGO Creations Logo](src/helpers/legobrick.png)
+<a target="_blank" href="https://icons8.com/icon/PJ2CPn0OCvD8/lego-brick">Lego Brick</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 Welcome to our LEGO Creations Website! This project allows users to explore, create, and save their own creations. Whether you're a seasoned brick enthusiast or just starting out, this platform offers a creative space for you to showcase your designs.
 
