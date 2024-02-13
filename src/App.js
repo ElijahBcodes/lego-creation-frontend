@@ -28,7 +28,7 @@ function App () {
       <Routes>
         <Route path="/" element={ <Home/>}/>
         <Route path="/creationindex" element={<CreationIndex creations={creations} /> }/>
-        <Route path="/creationshow" element={<CreationShow creations={creations}/>} />
+        <Route path="/creationshow/:id" element={<CreationShow creations={creations}/>} />
         <Route path="/creationnew" element={<CreationNew creations={creations}/>} />
         <Route path="/creationedit/:id" element={<CreationEdit creations={creations} updateCreation={updateCreation}/>} />
         <Route path="*" element={<NotFound/>} />
