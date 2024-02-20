@@ -15,7 +15,9 @@ function App () {
 
   const [creations, setCreations] = useState(mockCreations);
 
-
+  const createCreation = (creation) => {
+    console.log(creation)
+  }
 
   const updateCreation =(creation, id) => {
   
@@ -29,7 +31,7 @@ function App () {
         <Route path="/" element={ <Home/>}/>
         <Route path="/creationindex" element={<CreationIndex creations={creations} /> }/>
         <Route path="/creationshow/:id" element={<CreationShow creations={creations}/>} />
-        <Route path="/creationnew" element={<CreationNew creations={creations}/>} />
+        <Route path="/creationnew" element={<CreationNew createCreation={createCreation}/>} />
         <Route path="/creationedit/:id" element={<CreationEdit creations={creations} updateCreation={updateCreation}/>} />
         <Route path="*" element={<NotFound/>} />
         
