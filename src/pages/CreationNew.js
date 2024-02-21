@@ -13,9 +13,10 @@ const CreationNew = ({ createCreation }) => {
   const handleChange = (e) => {
     setNewCreation({ ...newCreation, [e.target.name]: e.target.value });
   };
-  
+
   const handleSubmit = () => {
-    createCreation(newCreation);
+    createCreation(newCreation)
+    navigate("/creationindex");
    
   }
   return (
