@@ -15,10 +15,9 @@ const CreationNew = ({ createCreation }) => {
   };
 
   const handleSubmit = () => {
-    createCreation(newCreation)
+    createCreation(newCreation);
     navigate("/creationindex");
-   
-  }
+  };
   return (
     <div>
       Save a Creation
@@ -50,10 +49,10 @@ const CreationNew = ({ createCreation }) => {
             value={newCreation.image}
           />
         </FormGroup>
-       <Button onClick={handleSubmit} name="submit">
+        <Button onClick={handleSubmit} name="submit">
           Save
         </Button>
-      </Form> 
+      </Form>
     </div>
   );
 };
