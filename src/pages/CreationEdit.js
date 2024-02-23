@@ -1,27 +1,47 @@
-import React from 'react'
-import {Form, FormGroup, Label, Input} from 'reactstrap'
+import React, { useState } from "react";
+import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { useNavigate, useParams } from "react-router-dom";
 
-const CreationEdit = () => {
+const CreationEdit = ({ creations, updateCreation }) => {
+  const { id } = useParams();
+  let currentCreation = creations?.find((creation) => creation.id === +id);
+
+  const [editCreation, setEditCreation] = useState({
+    name: currentCreation.name,
+    description: currentCreation.description,
+    image: currentCreation.image,
+  });
+  const handleChange = (e) => {
+    setEditCreation({ ...editCreation, [e.target.name]: e.target.value });
+  };
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    updateCreation(editCreation, currentCreation.id);
+    navigate("/creationindex");
+  };
+
   return (
     <Form>
-    <FormGroup>
-      <Label for="name">Name</Label>
-      <Input type="text" name="name" />
-    </FormGroup>
-    <FormGroup>
-      <Label for="age">Age</Label>
-      <Input type="number" name="age" />
-    </FormGroup>
-    <FormGroup>
-      <Label for="enjoys">Enjoys</Label>
-      <Input type="text" name="enjoys" />
-    </FormGroup>
-    <FormGroup>
-      <Label for="image">Image URL</Label>
-      <Input type="text" name="image" />
-    </FormGroup>
-  </Form>
-  )
-}
+      <FormGroup>
+        <Label for="name">Name</Label>
+        <Input type="text" name="name" onChange={handleChange}
+            value={editCreation.name} />
+      </FormGroup>
+      <FormGroup>
+        <Label for="description">Description</Label>
+        <Input type="text" name="description" onChange={handleChange}
+            value={editCreation.description} />
+      </FormGroup>
+      <FormGroup>
+        <Label for="image">Image URL</Label>
+        <Input type="text" name="image" onChange={handleChange}
+            value={editCreation.image}/>
+      </FormGroup>
+      <Button onClick={handleSubmit} name="submit">
+        Save
+      </Button>
+    </Form>
+  );
+};
 
-export default CreationEdit
+export default CreationEdit;
