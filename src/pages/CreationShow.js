@@ -1,12 +1,11 @@
 import React from "react";
 import { useParams, NavLink } from "react-router-dom";
 import "../App.css";
+import { Button } from "reactstrap"
 
-const CreationShow = ({ creations }) => {
+const CreationShow = ({ creations, deleteCreation }) => {
   const { id } = useParams();
   let currentCreation = creations.find((creation) => creation.id === +id);
-
-  console.log(currentCreation);
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl flex" key={id}>
@@ -22,6 +21,9 @@ const CreationShow = ({ creations }) => {
         >
           Edit Creation
         </NavLink>
+        <Button onClick={() => deleteCreation(id)}>
+          Delete Profile
+        </Button>
         <div className="card-actions justify-end"></div>
       </div>
     </div>
